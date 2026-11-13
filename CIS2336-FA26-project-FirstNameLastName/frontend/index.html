@@ -1,0 +1,580 @@
+<!-- start your front-end with this file-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UH Sugar Land Student Center</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="header-top">
+        <h1>UH Sugar Land Student Center</h1>
+        <span class="logo">UH</span>
+
+        <button id="menuToggle" class="menu-toggle"
+                aria-label="Toggle navigation"
+                aria-controls="navigation"
+                aria-expanded="false">
+            &#9776;
+        </button>
+    </div>
+
+    <nav id="navigation" aria-label="Main navigation">
+        <button class="active" data-page="home">Home</button>
+        <button data-page="faq">FAQ</button>
+        <button data-page="booking">Room Booking</button>
+        <button data-page="references">References</button>
+    </nav>
+</header>
+
+<main>
+
+    <!-- HOME PAGE -->
+    <section id="home" class="page active">
+
+        <div class="hero">
+            <h2>Welcome to the Student Center</h2>
+            <p>A Place to Study, Meet, and Connect</p>
+            <button class="btn" data-page="booking">
+                Book a Room
+            </button>
+        </div>
+
+        <div class="content-section">
+            <h2>About the Student Center</h2>
+            <p>
+                Welcome to the proposed University of Houston
+                Sugar Land Student Center!
+            </p>
+            <p>
+                Our goal is to create a welcoming environment
+                for students, faculty, and visitors.
+                The student center will provide spaces for
+                studying, collaboration, campus activities,
+                and student engagement.
+            </p>
+            <p>
+                Whether you need a quiet study space or a
+                meeting room for a group project, the
+                student center is designed to support
+                your academic and social experience.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Explore Our Student Center</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Study & Meet</h3>
+                    <p>
+                        Reserve a room for group projects,
+                        studying, or student meetings.
+                    </p>
+                    <button data-page="booking">
+                        Reserve a Room
+                    </button>
+                </div>
+
+                <div class="card">
+                    <h3>Student Resources</h3>
+                    <p>
+                        Explore student support services,
+                        academic resources, and opportunities
+                        to get involved.
+                    </p>
+                    <button data-page="faq">
+                        Learn More
+                    </button>
+                </div>
+
+                <div class="card">
+                    <h3>Quick Links</h3>
+                    <p>
+                        Have questions about room reservations
+                        or student center services?
+                    </p>
+                    <button data-page="faq">
+                        View FAQ
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="developer">
+            <h2>Developer Contact</h2>
+            <p><strong>Name:</strong> Matthew Morris</p>
+            <p>
+                <strong>UH Email:</strong>
+                <a href="mailto:Matthew@uh.edu">
+                    Matthew@uh.edu
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ PAGE -->
+    <section id="faq" class="page">
+
+        <h2>Frequently Asked Questions</h2>
+        <p>
+            Find answers to common questions about the
+            UH Sugar Land Student Center.
+        </p>
+
+        <div class="faq-container">
+
+            <details>
+                <summary>1. What are the operating hours?</summary>
+                <p>
+                    The Student Center is open Monday through Thursday
+                from 7:00 AM to 10:00 PM, Friday from 7:00 AM
+                to 8:00 PM, and Saturday from 9:00 AM to 5:00 PM.
+                The center is closed on Sundays and all University
+                holidays. Hours may vary during finals week and
+                special events.
+                </p>
+            </details>
+
+            <details>
+                <summary>2. Who can reserve a room?</summary>
+                <p>
+                    You can reserve a room through this website using
+                our Room Booking page. Select your preferred room,
+                date, and time. A valid UH student or faculty ID
+                is required. Reservations can be made up to two
+                weeks in advance, and students may book up to
+                3 hours per day per room.
+                </p>
+            </details>
+
+            <details>
+                <summary>3. How far ahead can I book?</summary>
+                <p>
+                    The demonstration booking form allows
+                    users to select a date up to 30 days
+                    in advance.
+                </p>
+            </details>
+
+            <details>
+                <summary>4. How long can I reserve a room?</summary>
+                <p>
+                    The maximum
+                    reservation duration is three hours with exception to volume of bookings.
+                </p>
+            </details>
+
+            <details>
+                <summary>5. What happens if a room is booked?</summary>
+                <p>
+                    If the room is already booked, you will receive a message
+                    indicating that the room is unavailable.
+                
+                </p>
+            </details>
+
+        </div>
+    </section>
+
+    <!-- ROOM BOOKING PAGE -->
+    <section id="booking" class="page">
+
+        <h2>Room Booking</h2>
+        <p>
+            Select a room and enter your reservation details.
+            
+        </p>
+
+        <h3>Room Options</h3>
+
+        <div class="room-grid">
+            <div class="room">
+                <h3>Cougar Conference Room</h3>
+                <p>Capacity: 12 people</p>
+            </div>
+
+            <div class="room">
+                <h3>Sugar Land Study Room</h3>
+                <p>Capacity: 4 people</p>
+            </div>
+
+            <div class="room">
+                <h3>Collaboration Hub</h3>
+                <p>Capacity: 8 people</p>
+            </div>
+
+            <div class="room">
+                <h3>Innovation Lab</h3>
+                <p>Capacity: 10 people</p>
+            </div>
+
+            <div class="room">
+                <h3>Multipurpose Room</h3>
+                <p>Capacity: 25 people</p>
+            </div>
+        </div>
+
+        <h2>Reservation Form</h2>
+
+        <form id="bookingForm">
+
+            <label for="studentName">Full Name</label>
+            <input type="text" id="studentName"
+                   minlength="2" maxlength="80" required>
+
+            <label for="studentEmail">UH Email Address</label>
+            <input type="email" id="studentEmail"
+                   placeholder="student@uh.edu" required>
+
+            <label for="roomSelect">Select Room</label>
+            <select id="roomSelect" required>
+                <option value="">-- Choose a Room --</option>
+                <option value="Cougar Conference Room">
+                    Cougar Conference Room
+                </option>
+                <option value="Sugar Land Study Room">
+                    Sugar Land Study Room
+                </option>
+                <option value="Collaboration Hub">
+                    Collaboration Hub
+                </option>
+                <option value="Innovation Lab">
+                    Innovation Lab
+                </option>
+                <option value="Multipurpose Room">
+                    Multipurpose Room
+                </option>
+            </select>
+
+            <label for="bookingDate">Reservation Date</label>
+            <input type="date" id="bookingDate" required>
+
+            <label for="startTime">Start Time</label>
+            <input type="time" id="startTime" required>
+
+            <label for="endTime">End Time</label>
+            <input type="time" id="endTime" required>
+
+            <label for="attendees">Number of Attendees</label>
+            <input type="number" id="attendees"
+                   min="1" max="25" required>
+
+            <label for="purpose">Purpose of Reservation</label>
+            <textarea id="purpose" rows="4"
+                      minlength="5" maxlength="500"
+                      placeholder="Describe your meeting or activity..."
+                      required></textarea>
+
+            <button type="submit" class="btn">
+                Check Reservation Details
+            </button>
+        </form>
+
+        <div id="bookingMessage"
+             role="status"
+             aria-live="polite"></div>
+    </section>
+
+    <!-- REFERENCES PAGE -->
+    <section id="references" class="page">
+
+        <h2>References & Resources</h2>
+        <p>
+            The following resources and AI tools were
+            used during the development of this project.
+        </p>
+
+        <div class="reference-box">
+            <h3>University Resources</h3>
+            <p>
+                University of Houston:
+                <a href="https://www.uh.edu/"
+                   target="_blank" rel="noopener noreferrer">
+                    www.uh.edu
+                </a>
+            </p>
+            <p>
+                UH at Sugar Land:
+                <a href="https://www.uh.edu/sugarland/"
+                   target="_blank" rel="noopener noreferrer">
+                    www.uh.edu/sugarland
+                </a>
+            </p>
+        </div>
+
+        <div class="reference-box">
+            <h3>Web Development Resources</h3>
+            <p>
+                <a href="https://developer.mozilla.org/"
+                   target="_blank" rel="noopener noreferrer">
+                    MDN Web Docs
+                </a>
+            </p>
+            <p>
+                <a href="https://www.w3schools.com/"
+                   target="_blank" rel="noopener noreferrer">
+                    W3Schools
+                </a>
+            </p>
+        </div>
+
+        <div class="reference-box">
+            <h3>Image and Font Credits</h3>
+            <p>Homepage hero image: Unsplash.</p>
+            <p>
+                Fonts: League Gothic and Source Sans 3,
+                provided through Google Fonts.
+            </p>
+        </div>
+
+        <div class="reference-box">
+            <h3>AI Tool Disclosure</h3>
+            <p><strong>Tool:</strong> ChatGPT by OpenAI</p>
+            <p>
+                ChatGPT assisted with the HTML, CSS,
+                JavaScript, and website organization.
+            </p>
+
+            <h3>AI Prompts Used</h3>
+            <ol>
+                <li>
+                    "I'm building a University of Houston Sugar Land Student Center website for a web development course project. 
+                    The site needs: a homepage with a navigation menu, developer contact section, and multimedia; a FAQ page with 5 collapsible items; 
+                    a room booking form with 5 rooms and validation; a reference page. The backend uses Node.js + Express to handle GET/POST for room bookings. 
+                    Help me plan the structure and design direction."
+                    
+                </li>
+                <li>
+                    "Create a production-grade HTML/CSS/JavaScript website for the UH Sugar Land Student Center. Use UH brand colors,
+                     Playfair Display for headings, DM Sans for body. Include: sticky nav with hamburger for mobile, hero section with UH branding, feature grid, 
+                     embedded YouTube video, developer contact footer. All pages in one HTML file toggled by JavaScript."
+                    
+                </li>
+                <li>"Implement a FAQ accordion in vanilla JavaScript. Clicking a question toggles its answer open/closed using CSS max-height transitions. 
+                    Only allow multiple items open at once. Include a + icon that rotates to × when open. Write clean, accessible HTML with proper button elements for the question triggers."</li>
+                <li>"Help me build a room reservation form using HTML for five different rooms. Include fields for student name, UH email, room selection, date, start time, end time, number of attendees, and reservation purpose."</li>
+                
+                <li>
+                    "Help me test my front-end website to make sure the navigation menu, 
+                    FAQ collapsibles, room booking form validation, 
+                    and responsive layout work correctly on desktop and mobile."
+                </li>
+            </ol>
+            <p>
+                
+            </p>
+        </div>
+
+        <div class="reference-box">
+            <h3>Project Information</h3>
+            <p><strong>Developer:</strong> Matthew Morris</p>
+            <p><strong>Course:</strong> CIS 2336</p>
+            <p><strong>Semester:</strong> Fall 2026</p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 UH Sugar Land Student Center | Class Project</p>
+    <p>
+        <a href="https://www.uh.edu/sugarland/"
+           target="_blank" rel="noopener noreferrer">
+            University of Houston at Sugar Land
+        </a>
+    </p>
+</footer>
+
+<script>
+// NAVIGATION
+
+const pages = document.querySelectorAll(".page");
+const navigation = document.getElementById("navigation");
+const menuToggle = document.getElementById("menuToggle");
+
+function showPage(pageId) {
+    const selectedPage = document.getElementById(pageId);
+
+    if (!selectedPage || !selectedPage.classList.contains("page")) {
+        return;
+    }
+
+    pages.forEach(page => page.classList.remove("active"));
+    selectedPage.classList.add("active");
+
+    document.querySelectorAll("nav button").forEach(button => {
+        const active = button.dataset.page === pageId;
+        button.classList.toggle("active", active);
+
+        if (active) {
+            button.setAttribute("aria-current", "page");
+        } else {
+            button.removeAttribute("aria-current");
+        }
+    });
+
+    navigation.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.textContent = "☰";
+
+    window.scrollTo(0, 0);
+}
+
+document.querySelectorAll("[data-page]").forEach(button => {
+    button.addEventListener("click", () => {
+        showPage(button.dataset.page);
+    });
+});
+
+// MOBILE MENU
+
+menuToggle.addEventListener("click", () => {
+    navigation.classList.toggle("open");
+
+    const isOpen = navigation.classList.contains("open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.textContent = isOpen ? "✕" : "☰";
+});
+
+// ROOM BOOKING VALIDATION
+
+const bookingForm = document.getElementById("bookingForm");
+const bookingMessage = document.getElementById("bookingMessage");
+const bookingDate = document.getElementById("bookingDate");
+
+const roomCapacities = {
+    "Cougar Conference Room": 12,
+    "Sugar Land Study Room": 4,
+    "Collaboration Hub": 8,
+    "Innovation Lab": 10,
+    "Multipurpose Room": 25
+};
+
+function formatDate(date) {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+
+    return `${year}-${month}-${day}`;
+}
+
+function updateDateLimits() {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const maxDate = new Date(today);
+    maxDate.setDate(maxDate.getDate() + 30);
+
+    bookingDate.min = formatDate(today);
+    bookingDate.max = formatDate(maxDate);
+}
+
+updateDateLimits();
+
+function showMessage(text, isError) {
+    bookingMessage.textContent = text;
+    bookingMessage.className = isError ? "error" : "success";
+}
+
+function timeToMinutes(time) {
+    const [hours, minutes] = time.split(":").map(Number);
+    return hours * 60 + minutes;
+}
+
+bookingForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    bookingMessage.textContent = "";
+    bookingMessage.className = "";
+    updateDateLimits();
+
+    const name = document.getElementById("studentName").value.trim();
+    const email = document.getElementById("studentEmail").value.trim();
+    const room = document.getElementById("roomSelect").value;
+    const date = bookingDate.value;
+    const start = document.getElementById("startTime").value;
+    const end = document.getElementById("endTime").value;
+    const attendeesValue = document.getElementById("attendees").value;
+    const attendees = Number(attendeesValue);
+    const purpose = document.getElementById("purpose").value.trim();
+
+    if (name.length < 2) {
+        showMessage("Please enter your full name.", true);
+        return;
+    }
+
+    const emailPattern = /^[^\s@]+@(?:[a-z0-9-]+\.)*uh\.edu$/i;
+
+    if (!emailPattern.test(email)) {
+        showMessage("Please enter a valid UH email address.", true);
+        return;
+    }
+
+    if (!Object.prototype.hasOwnProperty.call(roomCapacities, room)) {
+        showMessage("Please select a valid room.", true);
+        return;
+    }
+
+    if (!date || date < bookingDate.min || date > bookingDate.max) {
+        showMessage("Choose a date within the next 30 days.", true);
+        return;
+    }
+
+    if (!start || !end) {
+        showMessage("Please select both times.", true);
+        return;
+    }
+
+    const duration = timeToMinutes(end) - timeToMinutes(start);
+
+    if (duration <= 0) {
+        showMessage("End time must be later than start time.", true);
+        return;
+    }
+
+    if (duration > 180) {
+        showMessage("Reservations cannot exceed three hours.", true);
+        return;
+    }
+
+    const reservationStart = new Date(`${date}T${start}`);
+
+    if (reservationStart <= new Date()) {
+        showMessage("Please choose a future reservation time.", true);
+        return;
+    }
+
+    if (attendeesValue === "" ||
+        !Number.isInteger(attendees) ||
+        attendees < 1 ||
+        attendees > roomCapacities[room]) {
+        showMessage(
+            `This room allows 1 to ${roomCapacities[room]} people.`,
+            true
+        );
+        return;
+    }
+
+    if (purpose.length < 5) {
+        showMessage("Please describe your reservation purpose.", true);
+        return;
+    }
+
+    showMessage(
+        `Your reservation details for ${room} on ${date} ` +
+        `from ${start} to ${end} passed validation. ` +
+        `This is a front-end demonstration only. ` +
+        `Availability has not been checked and no booking was made.`,
+        false
+    );
+});
+</script>
+
+</body>
+</html>
